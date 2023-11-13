@@ -7,7 +7,7 @@ Sin embargo, cuando se hacen comparaciones en otras herramientas que no distingu
 A continuación os muestro una formula de Excel que calcula el ID de longitud 18 de Salesforce a partir del ID de longitud 15.
 
 Suponiendo que insertáis el ID15 en la casilla A2, podéis usar la siguiente fórmula para que calcule el ID18:
-```
+```cpp
 =CONCATENAR(A2;
 EXTRAE("ABCDEFGHIJKLMNOPQRSTUVWXYZ012345";(
 SI.ERROR(SI(ENCONTRAR(EXTRAE(A2;1;1);"ABCDEFGHIJKLMNOPQRSTUVWXYZ")>0;1;0);0)
@@ -33,4 +33,5 @@ SI.ERROR(SI(ENCONTRAR(EXTRAE(A2;11;1);"ABCDEFGHIJKLMNOPQRSTUVWXYZ")>0;1;0);0)
 ```
 
 Este sería el resultado con un ejemplo:
+
 ![Resultado Excel](/img/salesforce-id.png)
